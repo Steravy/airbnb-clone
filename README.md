@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Airbnb Clone
+
+This repository is an Airbnb clone built with Next.js, a powerful React.js framework. The project aims to replicate the core functionality of Airbnb, providing a platform for users to authenticate, browse property listings, search and filter listings, make bookings and reservations, and leave reviews.
+
+## Features
+
+- **User Authentication**: Users can create accounts, log in, and securely authenticate themselves on the platform.
+- **Property Listings**: Property owners can list their properties with details such as location, amenities, pricing, and availability.
+- **Search and Filtering**: Users can easily search for properties based on location, dates, price range, and other filters to find their ideal accommodations.
+- **Booking and Reservations**: Users can book properties and manage their reservations, including viewing booking details, modifying dates, and canceling reservations.
+- **Reviews**: Users can leave reviews and ratings for properties they have stayed in, providing valuable feedback to property owners and helping other users make informed decisions.
+- **Technologies**: The project utilizes a variety of technologies, including Next.js, React, Node.js, Express, MongoDB, and Tailwind CSS, to deliver a modern and efficient application.
 
 ## Getting Started
 
-First, run the development server:
+To get started with this project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. Clone the repository: `git clone https://github.com/Steravy/Airbnb-clone`
+2. Install the dependencies: `npm install`
+3. Set up the environment variables by creating a `.env` file and filling in the required values.
+4. Start the development server: `npm run dev`
+5. Open your browser and navigate to `http://localhost:3000` to access the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Contributions are welcome! If you want to contribute to this project, please follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Fork the repository.
+2. Create a new branch: `git checkout -b my-feature`.
+3. Make your changes and commit them: `git commit -am 'Add new feature'`.
+4. Push the branch: `git push origin my-feature`.
+5. Open a pull request and describe the changes you made.
 
-## Learn More
+## Acknowledgments
 
-To learn more about Next.js, take a look at the following resources:
+- This project was inspired by the functionality and design of Airbnb.
+- Thanks to the open-source community for their contributions to the technologies used in this project.
+- Thanks to [@AntonioErdeljac](https://github.com/AntonioErdeljac) for the amazing tutorial he made on this topic, where i could inspire and learn a lot in order to create my own Airbnb clone.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##Author
+[Stefan Vitoria](https://github.com/Steravy).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
+If you have any questions, suggestions, or feedback, please feel free to contact at [stefanvitoria@sapo.pt](mailto:stefanvitoria@sapo.pt).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](LICENSE.md). Feel free to use, modify, and distribute the code as per the terms of the license.
