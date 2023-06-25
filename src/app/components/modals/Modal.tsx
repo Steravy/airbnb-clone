@@ -34,7 +34,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, f
         setShowModal(false);
 
         setTimeout(() => {
-            // onClose();
+            onClose();
         }, 300);
 
     }, [disabled, onClose]);

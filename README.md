@@ -1,6 +1,6 @@
 # Airbnb Clone
 
-This repository is an Airbnb clone built with Next.js, a powerful React.js framework. The project aims to replicate the core functionality of Airbnb, providing a platform for users to authenticate, browse property listings, search and filter listings, make bookings and reservations, and leave reviews. But the mail goal was to built something challenging in order to shap my skill and gain new ones.
+This repository is an Airbnb clone built with Next.js, a powerful React.js framework. The project aims to replicate the core functionality of Airbnb, providing a platform for users to authenticate, browse property listings, search and filter listings, make bookings and reservations, and leave reviews. But the main goal was to built something challenging in order to sharp my skills and gain new ones.
 
 ## Features
 
