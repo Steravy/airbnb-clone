@@ -39,7 +39,7 @@ Contributions are welcome! If you want to contribute to this project, please fol
 
 ## Author
 
-[Stefan Vitoria](https://github.com/Steravy).
+[Stefan Vitoria](https://github.com/Steravy)
 
 ## Contact
 
