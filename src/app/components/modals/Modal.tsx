@@ -93,6 +93,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, f
 
                                     <Button disabled={disabled} label={actionLabel} icon={IoMdClose} onClick={handleSubmit} />
                                 </article>
+                                {footer}
                             </article>
                         </article>
                     </article>
