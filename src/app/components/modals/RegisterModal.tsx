@@ -9,6 +9,7 @@ import useRgisterModal from "@/app/hooks/useRegisterModal";
 import Modal from "./Modal";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
+import { toast } from "react-hot-toast";
 
 
 const RegisterModal = () => {
@@ -33,7 +34,7 @@ const RegisterModal = () => {
                 useRegisterModal.onClose();
             })
             .catch((errors) => {
-                console.log(errors);
+                toast.error(errors.message)
             })
             .finally(() => {
                 setIsLoading(false)
