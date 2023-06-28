@@ -9,7 +9,7 @@ This repository is an Airbnb clone built with Next.js, a powerful React.js frame
 - **Search and Filtering**: Users can easily search for properties based on location, dates, price range, and other filters to find their ideal accommodations.
 - **Booking and Reservations**: Users can book properties and manage their reservations, including viewing booking details, modifying dates, and canceling reservations.
 - **Reviews**: Users can leave reviews and ratings for properties they have stayed in, providing valuable feedback to property owners and helping other users make informed decisions.
-- **Technologies**: The project utilizes a variety of technologies, including Next.js, React, Node.js, Express, MongoDB, and Tailwind CSS, to deliver a modern and efficient application.
+- **Technologies**: The project utilizes a variety of technologies, including Next.js, React, Node.js, Express, MongoDB, Prisma, and Tailwind CSS, to deliver a modern and efficient application.
 
 ## Getting Started
 
