@@ -5,8 +5,15 @@ import { Fragment, useCallback, useState } from 'react';
 import MenuItem from './MenuItem';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
+import { User } from '@prisma/client';
+import { signOut } from 'next-auth/react';
 
-const UserMenu = () => {
+interface UserMenuProps {
+
+    currentUser?: User | null;
+}
+
+const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const registerModal = useRegisterModal();
@@ -39,10 +46,27 @@ const UserMenu = () => {
                 isOpen &&
                 <article className="absolute right-0 top-12 text-sm rounded-xl shadow-md w-[40vw] md:w-3/4 bg-white overflow-hidden " >
                     <article className="flex flex-col cursor-pointer" >
-                        <Fragment>
-                            <MenuItem label="LogIn" onClick={loginModal.onOpen} />
-                            <MenuItem label="Sign Up" onClick={registerModal.onOpen} />
-                        </Fragment>
+                        {
+                            currentUser ?
+                                (
+                                    <Fragment>
+                                        <MenuItem label="My trips" onClick={() => { }} />
+                                        <MenuItem label="Favourites" onClick={() => { }} />
+                                        <MenuItem label="Reservations" onClick={() => { }} />
+                                        <MenuItem label="Properties" onClick={() => { }} />
+                                        <MenuItem label="Airbnb my home" onClick={() => { }} />
+                                        <MenuItem label="Logout" onClick={() => { signOut() }} />
+                                    </Fragment>
+                                ) :
+
+                                (
+                                    <Fragment>
+                                        <MenuItem label="LogIn" onClick={loginModal.onOpen} />
+                                        <MenuItem label="Sign Up" onClick={registerModal.onOpen} />
+                                    </Fragment>
+                                )
+                        }
+
                     </article>
                 </article>
             }
