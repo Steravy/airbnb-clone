@@ -4,11 +4,13 @@ import UserAvatar from '../UserAvatar';
 import { Fragment, useCallback, useState } from 'react';
 import MenuItem from './MenuItem';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
+import useLoginModal from '@/app/hooks/useLoginModal';
 
 const UserMenu = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const registerModal = useRegisterModal();
+    const loginModal = useLoginModal();
 
     const toggle = useCallback(() => {
         setIsOpen(isOpen => !isOpen);
@@ -38,7 +40,7 @@ const UserMenu = () => {
                 <article className="absolute right-0 top-12 text-sm rounded-xl shadow-md w-[40vw] md:w-3/4 bg-white overflow-hidden " >
                     <article className="flex flex-col cursor-pointer" >
                         <Fragment>
-                            <MenuItem label="LogIn" onClick={() => { }} />
+                            <MenuItem label="LogIn" onClick={loginModal.onOpen} />
                             <MenuItem label="Sign Up" onClick={registerModal.onOpen} />
                         </Fragment>
                     </article>
