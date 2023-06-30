@@ -1,16 +1,16 @@
 'use client';
+import useLoginModal from '@/app/hooks/useLoginModal';
+import useRegisterModal from '@/app/hooks/useRegisterModal';
+import { CustomUser } from '@/app/types';
+import { signOut } from 'next-auth/react';
+import { Fragment, useCallback, useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import UserAvatar from '../UserAvatar';
-import { Fragment, useCallback, useState } from 'react';
 import MenuItem from './MenuItem';
-import useRegisterModal from '@/app/hooks/useRegisterModal';
-import useLoginModal from '@/app/hooks/useLoginModal';
-import { User } from '@prisma/client';
-import { signOut } from 'next-auth/react';
 
 interface UserMenuProps {
 
-    currentUser?: User | null;
+    currentUser?: CustomUser | null;
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
@@ -55,7 +55,8 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                                         <MenuItem label="Reservations" onClick={() => { }} />
                                         <MenuItem label="Properties" onClick={() => { }} />
                                         <MenuItem label="Airbnb my home" onClick={() => { }} />
-                                        <MenuItem label="Logout" onClick={() => { signOut() }} />
+                                        <hr />
+                                        <MenuItem label="Logout" onClick={() => signOut()} />
                                     </Fragment>
                                 ) :
 
