@@ -59,17 +59,17 @@ const LoginModal = () => {
         <section className="flex flex-col gap-4 mt-3" >
             <hr />
             <Button
-                label="Continue with google"
+                label="Continue with Coogle"
                 outline
                 icon={FcGoogle}
                 onClick={() => { }}
             />
 
             <Button
-                label="Continue with google"
+                label="Continue with Github"
                 outline
                 icon={AiFillGithub}
-                onClick={() => { }}
+                onClick={() => signIn('github')}
             />
 
             <article className="text-neutral-500 text-center mt-4 font-light" >
