@@ -62,7 +62,7 @@ const LoginModal = () => {
                 label="Continue with Coogle"
                 outline
                 icon={FcGoogle}
-                onClick={() => { }}
+                onClick={() => signIn('google')}
             />
 
             <Button

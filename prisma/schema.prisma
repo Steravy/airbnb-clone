@@ -14,24 +14,26 @@ model User {
   id             String    @id @default(auto()) @map("_id") @db.ObjectId
   name           String?
   email          String?   @unique
-  emailVerified  DateTime?
+  emailVerified  DateTime? @map("email_verified")
   image          String?
   hashedPassword String?
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
   favoriteIds    String[]  @db.ObjectId
 
-  accounts     Accounts[]
+  accounts     Account[]
   listings     Listing[]
   reservations Reservation[]
+
+  @@map("users")
 }
 
-model Accounts {
+model Account {
   id                String  @id @default(auto()) @map("_id") @db.ObjectId
-  userId            String  @db.ObjectId
+  userId            String  @map("user_id") @db.ObjectId
   type              String
   provider          String
-  providerAccountId String
+  providerAccountId String  @map("provider_account_id")
   access_token      String? @db.String
   refresh_token     String? @db.String
   expires_at        Int?
@@ -43,6 +45,7 @@ model Accounts {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@map("accounts")
 }
 
 model Listing {
