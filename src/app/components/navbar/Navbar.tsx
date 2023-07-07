@@ -25,6 +25,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
                     </article>
                 </Container>
             </nav>
+            <Categories/>
         </header>
     )
 }
