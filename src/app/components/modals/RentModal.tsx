@@ -7,6 +7,8 @@ import CountrySelector from "../inputs/CountrySelector";
 import Heading from "../Heading";
 import CategoryInput from "../inputs/CategoryInput";
 import Modal from "./Modal";
+import dynamic from "next/dynamic";
+// import Map from "../Map";
 
 
 enum STEPS {
@@ -50,6 +52,10 @@ const RentModal = () => {
     const category = watch('category');
     const location = watch('location');
 
+
+    const Map = useMemo(() => dynamic(() => import('../Map'), {
+        ssr: false
+    }), [location]);
 
     const setValueExtended = (id: string, value: any) => {
         setValue(id, value, {
@@ -112,6 +118,7 @@ const RentModal = () => {
                     value={location}
                     onChange={(value) => setValueExtended('location', value)}
                 />
+                <Map center={location?.latlng} />
             </section>
         )
     }

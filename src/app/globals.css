@@ -32,3 +32,10 @@ body,
 ::-webkit-scrollbar-thumb:hover {
     background: #8c8c8c;
 }
+
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet.top {
+    z-index: 0 !important;
+}
