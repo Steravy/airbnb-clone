@@ -2,7 +2,7 @@
 
 import { categories } from "@/app/lib/categoryItemsProvider";
 import Container from "../Container";
-import CategoryItem from "./CategoryContainer";
+import CategoryItem from "./CategoryItem";
 import { usePathname, useSearchParams } from "next/navigation";
 
 
