@@ -1,31 +1,23 @@
+'use client';
+
+import { categories } from "@/app/lib/categoryItemsProvider";
 import Container from "../Container";
-import { TbBeach } from "react-icons/tb";
-import { GiWindmill } from "react-icons/gi"
-import { MdOutlineVilla } from "react-icons/md"
 import CategoryItem from "./CategoryContainer";
-
-
-const categories = [
-  {
-    label: 'Beach',
-    icon: TbBeach,
-    description: 'Amazing view to the beach!'
-  },
-  {
-    label: 'Windmills',
-    icon: GiWindmill,
-    description: 'This property has windmills!'
-  },
-  {
-    label: 'Modern',
-    icon: MdOutlineVilla,
-    description: 'This property has windmills!'
-  },
-]
+import { usePathname, useSearchParams } from "next/navigation";
 
 
 
 const Categories = () => {
+
+  const params = useSearchParams();
+  const selectedCategory = params?.get('category');
+  const pathname = usePathname();
+
+  const isMainPage = pathname === '/';
+
+  if (!isMainPage) return null;
+
+
   return (
     <Container>
       <article className="pt-4 flex flex-row items-center justify-between overflow-x-auto" >
@@ -35,7 +27,7 @@ const Categories = () => {
               key={category.label}
               label={category.label}
               icon={category.icon}
-              description={category.description}
+              selected={category.label === selectedCategory}
             />
           ))
         }
