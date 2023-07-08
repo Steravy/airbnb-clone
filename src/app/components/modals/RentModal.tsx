@@ -48,6 +48,8 @@ const RentModal = () => {
     });
 
     const category = watch('category');
+    const location = watch('location');
+
 
     const setValueExtended = (id: string, value: any) => {
         setValue(id, value, {
@@ -106,7 +108,10 @@ const RentModal = () => {
                     title="Where is your property located?"
                     subtitle="Help guests find your place"
                 />
-                <CountrySelector />
+                <CountrySelector
+                    value={location}
+                    onChange={(value) => setValueExtended('location', value)}
+                />
             </section>
         )
     }
