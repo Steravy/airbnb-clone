@@ -56,6 +56,7 @@ const RentModal = () => {
     const guestCount = watch('guestCount');
     const roomCount = watch('roomCount');
     const bathroomCount = watch('bathroomCount');
+    const imageSrc = watch('imageSrc');
 
 
     const Map = useMemo(() => dynamic(() => import('../Map'), {
@@ -164,7 +165,21 @@ const RentModal = () => {
                     title='Add photos of your place'
                     subtitle='Show guests how your place look like!'
                 />
-                <ImageUploader />
+                <ImageUploader
+                    value={imageSrc}
+                    onChange={(value) => setValueExtended('imageSrc', value)}
+                />
+            </section>
+        )
+    }
+
+    if (step === STEPS.DESCRIPTION) {
+        bodyContent = (
+            <section className={`flex flex-col gap-8`} >
+                <Heading
+                    title='How would you describe your place?'
+                    subtitle='Short ones work best!'
+                />
             </section>
         )
     }
