@@ -37,11 +37,7 @@ const Map: React.FC<MapProps> = ({ center }) => {
 
             {
                 center && (
-                    <Marker position={center as Leaflet.LatLngExpression}>
-                        <Popup>
-                            A pretty CSS3 popup. <br /> Easily customizable.
-                        </Popup>
-                    </Marker>
+                    <Marker position={center as Leaflet.LatLngExpression} />
                 )
             }
 

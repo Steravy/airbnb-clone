@@ -1,13 +1,15 @@
 'use client';
 import useRentModal from "@/app/hooks/useRentModal";
 import { categories } from "@/app/lib/categoryItemsProvider";
+import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
-import CountrySelector from "../inputs/CountrySelector";
 import Heading from "../Heading";
 import CategoryInput from "../inputs/CategoryInput";
+import Counter from "../inputs/Counter";
+import CountrySelector from "../inputs/CountrySelector";
 import Modal from "./Modal";
-import dynamic from "next/dynamic";
+import ImageUploader from "../inputs/ImageUploader";
 // import Map from "../Map";
 
 
@@ -51,6 +53,9 @@ const RentModal = () => {
 
     const category = watch('category');
     const location = watch('location');
+    const guestCount = watch('guestCount');
+    const roomCount = watch('roomCount');
+    const bathroomCount = watch('bathroomCount');
 
 
     const Map = useMemo(() => dynamic(() => import('../Map'), {
@@ -65,11 +70,11 @@ const RentModal = () => {
         })
     }
 
-    const onBack = () => {
+    const handleBack = () => {
         setStep(step => step - 1);
     }
 
-    const onNext = () => {
+    const handleNext = () => {
         setStep(step => step + 1);
     }
 
@@ -123,6 +128,47 @@ const RentModal = () => {
         )
     }
 
+    if (step === STEPS.INFO) {
+        bodyContent = (
+            <section className={`flex flex-col gap-8`} >
+                <Heading
+                    title="Share some basics information about your property"
+                    subtitle="What amenities do you have?"
+                />
+                <Counter
+                    title='Guests'
+                    subtitle='How many guests do you allow?'
+                    value={guestCount}
+                    onChange={(value) => setValueExtended('guestCount', value)}
+                />
+                <Counter
+                    title='Rooms'
+                    subtitle='How many rooms do you have?'
+                    value={roomCount}
+                    onChange={(value) => setValueExtended('roomCount', value)}
+                />
+                <Counter
+                    title='Bathrooms'
+                    subtitle='How many bathrooms do you have?'
+                    value={bathroomCount}
+                    onChange={(value) => setValueExtended('bathroomCount', value)}
+                />
+            </section>
+        )
+    }
+
+    if (step === STEPS.IMAGES) {
+        bodyContent = (
+            <section className={`flex flex-col gap-8`} >
+                <Heading
+                    title='Add photos of your place'
+                    subtitle='Show guests how your place look like!'
+                />
+                <ImageUploader />
+            </section>
+        )
+    }
+
     return (
         <Modal
             title="Airbnb your home!"
@@ -131,8 +177,8 @@ const RentModal = () => {
             actionLabel={actionLabel}
             secondaryActionLabel={secondaryActionLabel}
             onClose={rentModal.onClose}
-            onSubmit={onNext}
-            secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
+            onSubmit={handleNext}
+            secondaryAction={step === STEPS.CATEGORY ? undefined : handleBack}
             body={bodyContent}
         // footer={footerContent}
         />
