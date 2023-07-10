@@ -8,6 +8,7 @@ import { Fragment, useCallback, useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import UserAvatar from '../UserAvatar';
 import MenuItem from './MenuItem';
+import { IoMdClose } from 'react-icons/io';
 
 interface UserMenuProps {
 
@@ -26,7 +27,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     }, []);
 
     const onRent = useCallback(() => {
-        if (!currentUser) return loginModal.onOpen();
+        // if (!currentUser) return loginModal.onOpen();
 
         rentModal.onOpen();
     }, [loginModal, currentUser, rentModal]);
@@ -44,7 +45,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                     onClick={toggle}
                     className="p-4 md:py-1 md:px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition"
                 >
-                    <AiOutlineMenu />
+                    { isOpen ? <IoMdClose /> : <AiOutlineMenu />}
                     <article className="hidden md:block">
                         <UserAvatar src={currentUser?.image} />
                     </article>

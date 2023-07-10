@@ -20,7 +20,7 @@ const Input: React.FC<InputProps> = ({ id, label, type = 'text', disabled, forma
     <article className="relative w-full" >
       {
         formatPrice && (
-          <BiDollar size={24} className="absolute top-5 left-2 text-neutral-700 " />
+          <BiDollar size={18} className="absolute top-5 left-2 text-zinc-400 " />
         )
       }
       <input
