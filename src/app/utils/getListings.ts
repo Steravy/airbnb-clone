@@ -1,4 +1,5 @@
 import prisma from "@/app/lib/prismadb";
+import { toast } from "react-hot-toast";
 
 
 export default async function getListings() {
@@ -12,5 +13,6 @@ export default async function getListings() {
 
     } catch (error: any) {
         throw new Error(error);
+        // return toast.error(error)
     }
 }
