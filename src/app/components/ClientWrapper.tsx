@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 
-interface ClientOnlyProps {
+interface ClientWrapperProps {
     children: React.ReactNode;
 }
 
-const ClientOnly: React.FC<ClientOnlyProps> = ({
+const ClientWrapper: React.FC<ClientWrapperProps> = ({
     children
 }) => {
     const [hasMounted, setHasMounted] = useState(false);
@@ -24,4 +24,4 @@ const ClientOnly: React.FC<ClientOnlyProps> = ({
     );
 };
 
-export default ClientOnly;
+export default ClientWrapper;

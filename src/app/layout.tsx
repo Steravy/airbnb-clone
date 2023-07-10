@@ -6,6 +6,7 @@ import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import ToastProvider from './providers/ToastProvider'
 import getCurrentUser from './utils/getCurrentUser'
+import ClientWrapper from './components/ClientWrapper'
 
 const nunito = Nunito({ subsets: ['latin'] })
 
@@ -25,11 +26,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <ToastProvider />
-        <RentModal />
-        <RegisterModal />
-        <LoginModal />
-        <Navbar currentUser={currentUser} />
+        <ClientWrapper>
+          <ToastProvider />
+          <RentModal />
+          <RegisterModal />
+          <LoginModal />
+          <Navbar currentUser={currentUser} />
+        </ClientWrapper>
         <section className="pb-20 pt-28">
           {children}
         </section>
