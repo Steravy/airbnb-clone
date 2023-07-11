@@ -1,7 +1,7 @@
 'use client';
 
 import useCountries from "@/app/hooks/useCountries";
-import { CustomUser } from "@/app/types";
+import { ModifiedListing, ModifiedUser } from "@/app/types";
 import { Listing, Reservation } from "@prisma/client";
 import { format } from 'date-fns';
 import Image from "next/image";
@@ -11,13 +11,13 @@ import HeartButton from "../HeartButton";
 import Button from "../Button";
 
 interface ListingCardProps {
-  data: Listing;
+  data: ModifiedListing;
   reservation?: Reservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
   actionLabel?: string;
   actionId?: string;
-  currentUser?: CustomUser | null
+  currentUser?: ModifiedUser | null
 };
 const ListingCard: React.FC<ListingCardProps> = ({ data, reservation, onAction, disabled, actionLabel, actionId = '', currentUser }) => {
 

@@ -2,7 +2,7 @@
 import useLoginModal from '@/app/hooks/useLoginModal';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useRentModal from '@/app/hooks/useRentModal';
-import { CustomUser } from '@/app/types';
+import { ModifiedUser } from '@/app/types';
 import { signOut } from 'next-auth/react';
 import { Fragment, useCallback, useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
@@ -12,7 +12,7 @@ import { IoMdClose } from 'react-icons/io';
 
 interface UserMenuProps {
 
-    currentUser?: CustomUser | null;
+    currentUser?: ModifiedUser | null;
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {

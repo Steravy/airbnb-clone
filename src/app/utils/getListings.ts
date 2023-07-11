@@ -1,5 +1,4 @@
 import prisma from "@/app/lib/prismadb";
-import { toast } from "react-hot-toast";
 
 
 export default async function getListings() {
@@ -9,7 +8,12 @@ export default async function getListings() {
                 createdAt: 'desc'
             }
         });
-        return listings;
+
+        const safeListingsType = listings.map((listing) => ({
+            ...listing,
+            createdAt: listing.createdAt.toISOString()
+        }))
+        return safeListingsType;
 
     } catch (error: any) {
         throw new Error(error);

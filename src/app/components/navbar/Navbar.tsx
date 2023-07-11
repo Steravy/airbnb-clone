@@ -1,6 +1,6 @@
 'use client';
 
-import { CustomUser } from "@/app/types";
+import { ModifiedUser } from "@/app/types";
 import Container from "../Container";
 import Logo from "./Logo";
 import Search from "./Search";
@@ -9,7 +9,7 @@ import Categories from "./Categories";
 
 interface NavbarProps {
 
-    currentUser?: CustomUser | null;
+    currentUser?: ModifiedUser | null;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
