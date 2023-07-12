@@ -5,6 +5,11 @@ import { ModifiedUser } from "@/app/types";
 import { IconType } from "react-icons";
 import UserAvatar from "../UserAvatar";
 import ListingCategory from "./ListingCategory";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import('../Map'), {
+    ssr: false
+});
 
 interface ListingDetailsProps {
     user: ModifiedUser;
@@ -51,6 +56,8 @@ const ListingDetails: React.FC<ListingDetailsProps> = ({ user, category, descrip
             <p className="text-lg font-light text-neutral-500" >
                 {description}
             </p>
+            <hr />
+            <Map center={coordinates} />
         </article>
     )
 }
