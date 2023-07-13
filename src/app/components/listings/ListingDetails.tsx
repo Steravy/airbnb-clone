@@ -34,7 +34,7 @@ const ListingDetails: React.FC<ListingDetailsProps> = ({ user, category, descrip
     return (
         <article className="col-span-4 flex flex-col gap-8" >
             <div className="text-xl font-semibold flex flex-row items-center gap-2" >
-                <p>Hosted by {user.name}</p>
+                <span>Hosted by {user.name}</span>
                 <UserAvatar src={user?.image} />
             </div>
             <div className="flex flex-row items-center gap-4 font-light text-neutral-500" >
