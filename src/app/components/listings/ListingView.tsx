@@ -16,7 +16,7 @@ import ListingReservation from "./ListingReservation";
 
 interface ListingViewProps {
   currentUser?: ModifiedUser | null;
-  reservation?: ModifiedReservation[];
+  reservations?: ModifiedReservation[];
   listing: ModifiedListing & {
     user: ModifiedUser
   };
@@ -30,7 +30,7 @@ const defaultDateRange = {
 }
 
 
-const ListingView: React.FC<ListingViewProps> = ({ listing, currentUser, reservation: reservations = [] }) => {
+const ListingView: React.FC<ListingViewProps> = ({ listing, currentUser, reservations: reservations = [] }) => {
 
   const loginModal = useLoginModal();
   const router = useRouter();
