@@ -7,6 +7,7 @@ import axios from "axios";
 import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { Range } from "react-date-range";
 import { toast } from "react-hot-toast";
 import Container from "../Container";
 import ListingDetails from "./ListingDetails";
@@ -22,7 +23,7 @@ interface ListingViewProps {
 }
 
 
-const defaultDateRage = {
+const defaultDateRange = {
   startDate: new Date(),
   endDate: new Date(),
   key: 'selection',
@@ -36,7 +37,7 @@ const ListingView: React.FC<ListingViewProps> = ({ listing, currentUser, reserva
 
   const [isLoading, setIsLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(listing.price);
-  const [dateRange, setDateRange] = useState(defaultDateRage);
+  const [dateRange, setDateRange] = useState<Range>(defaultDateRange);
 
   const dateDisabler = useMemo(() => {
 
@@ -50,6 +51,8 @@ const ListingView: React.FC<ListingViewProps> = ({ listing, currentUser, reserva
 
       dates = [...dates, ...range];
     })
+
+    return dates;
 
   }, [reservations]);
 
@@ -68,7 +71,7 @@ const ListingView: React.FC<ListingViewProps> = ({ listing, currentUser, reserva
       })
       .then(() => {
         toast.success('Reservation created!')
-        setDateRange(defaultDateRage);
+        setDateRange(defaultDateRange);
         // redirect to trips page
         router.refresh();
       })

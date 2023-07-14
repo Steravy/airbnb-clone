@@ -2,6 +2,7 @@
 
 import { Range } from "react-date-range";
 import Calendar from "../inputs/Calendar";
+import Button from "../Button";
 
 interface ListingReservationProps {
     price: number;
@@ -29,6 +30,19 @@ const ListingReservation: React.FC<ListingReservationProps> = ({ price, totalPri
                 disabledDates={disabledDates}
                 onChange={(value) => onChangeDate(value.selection)}
             />
+            <hr />
+            <article className="p-4" >
+                <Button
+                    label="Reserve"
+                    disabled={disabled}
+                    onClick={onSubmit}
+
+                />
+            </article>
+            <article className="p-4 flex flex-row items-center justify-between font-semibold text-lg" >
+                <span >Total:</span>
+                <span >$ {totalPrice}</span>
+            </article>
         </article>
 
     )
