@@ -73,7 +73,7 @@ const ListingView: React.FC<ListingViewProps> = ({ listing, currentUser, reserva
         toast.success('Reservation created!')
         setDateRange(defaultDateRange);
         // redirect to trips page
-        router.refresh();
+        router.push('/trips');
       })
       .catch((error) => {
         toast.error('Something went wrong!');

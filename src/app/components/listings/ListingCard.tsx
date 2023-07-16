@@ -1,7 +1,7 @@
 'use client';
 
 import useCountries from "@/app/hooks/useCountries";
-import { ModifiedListing, ModifiedUser } from "@/app/types";
+import { ModifiedListing, ModifiedReservation, ModifiedUser } from "@/app/types";
 import { Listing, Reservation } from "@prisma/client";
 import { format } from 'date-fns';
 import Image from "next/image";
@@ -12,7 +12,7 @@ import Button from "../Button";
 
 interface ListingCardProps {
   data: ModifiedListing;
-  reservation?: Reservation;
+  reservation?: ModifiedReservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
   actionLabel?: string;
@@ -29,9 +29,11 @@ const ListingCard: React.FC<ListingCardProps> = ({ data, reservation, onAction, 
   const handleCancel = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
 
     e.stopPropagation();
+
     if (disabled) return;
 
     onAction?.(actionId)
+
   }, [onAction, actionId, disabled]);
 
   const price = useMemo(() => {
@@ -88,7 +90,7 @@ const ListingCard: React.FC<ListingCardProps> = ({ data, reservation, onAction, 
             <Button
               label={actionLabel}
               small
-              disabled
+              disabled={disabled}
               onClick={handleCancel}
 
             />

@@ -9,6 +9,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import UserAvatar from '../UserAvatar';
 import MenuItem from './MenuItem';
 import { IoMdClose } from 'react-icons/io';
+import { useRouter } from 'next/navigation';
 
 interface UserMenuProps {
 
@@ -17,6 +18,7 @@ interface UserMenuProps {
 
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
 
+    const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
@@ -45,7 +47,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                     onClick={toggle}
                     className="p-4 md:py-1 md:px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition"
                 >
-                    { isOpen ? <IoMdClose /> : <AiOutlineMenu />}
+                    {isOpen ? <IoMdClose /> : <AiOutlineMenu />}
                     <article className="hidden md:block">
                         <UserAvatar src={currentUser?.image} />
                     </article>
@@ -59,7 +61,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                             currentUser ?
                                 (
                                     <Fragment>
-                                        <MenuItem label="My trips" onClick={() => { }} />
+                                        <MenuItem label="My trips" onClick={() => router.push('/trips')} />
                                         <MenuItem label="Favourites" onClick={() => { }} />
                                         <MenuItem label="Reservations" onClick={() => { }} />
                                         <MenuItem label="Properties" onClick={() => { }} />
