@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import Container from "@/app/components/Container";
 import Heading from "@/app/components/Heading";
-import { ModifiedReservation, ModifiedUser } from "@/app/types";
+import { ModifiedListing, ModifiedReservation, ModifiedUser } from "@/app/types";
 import { useCallback, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
@@ -11,12 +11,12 @@ import ListingCard from "@/app/components/listings/ListingCard";
 
 
 
-interface TripsViewProps {
-  reservations: ModifiedReservation[];
+interface PropertiesViewProps {
+  listings: ModifiedListing[];
   currentUser: ModifiedUser | null;
 }
 
-const TripsView: React.FC<TripsViewProps> = ({ reservations, currentUser }) => {
+const PropertiesView: React.FC<PropertiesViewProps> = ({ listings, currentUser }) => {
 
   const router = useRouter();
   const [idToDelete, setIdToDelete] = useState('');
@@ -26,9 +26,9 @@ const TripsView: React.FC<TripsViewProps> = ({ reservations, currentUser }) => {
     setIdToDelete(id);
 
     axios
-      .delete(`/api/reservations/${id}`)
+      .delete(`/api/listings/${id}`)
       .then(() => {
-        toast.success('Reservation Cancelled!')
+        toast.success('Property Deleted!')
         router.refresh();
       })
       .catch((error) => {
@@ -42,20 +42,19 @@ const TripsView: React.FC<TripsViewProps> = ({ reservations, currentUser }) => {
   return (
     <Container>
       <Heading
-        title="Trips"
-        subtitle="Where you have been and where you are going..."
+        title="Prpoperties"
+        subtitle="Here is your list of properties"
       />
       <section className='mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8' >
         {
-          reservations.map((reservation) => (
+          listings.map((listing) => (
             <ListingCard
-              key={reservation.id}
-              data={reservation.listing}
-              reservation={reservation}
-              actionId={reservation.id}
+              key={listing.id}
+              data={listing}
+              actionId={listing.id}
               onAction={handleDelete}
-              disabled={idToDelete === reservation.id}
-              actionLabel="Cancel reservation"
+              disabled={idToDelete === listing.id}
+              actionLabel="Delete Property"
               currentUser={currentUser}
             />
           ))
@@ -65,4 +64,4 @@ const TripsView: React.FC<TripsViewProps> = ({ reservations, currentUser }) => {
   )
 }
 
-export default TripsView;
+export default PropertiesView;

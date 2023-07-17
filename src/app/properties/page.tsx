@@ -1,11 +1,10 @@
 import ClientWrapper from "../components/ClientWrapper";
 import EmptyState from "../components/EmptyState";
-import { ModifiedReservation } from "../types";
 import getCurrentUser from "../utils/getCurrentUser";
-import getReservations from "../utils/getReservations";
-import TripsView from "./components/TripsView";
+import getListings from "../utils/getListings";
+import PropertiesView from "./components/PropertiesView";
 
-const TripsPage = async () => {
+const PropertiesPage = async () => {
 
     const currentUser = await getCurrentUser();
 
@@ -13,26 +12,27 @@ const TripsPage = async () => {
 
         return (
             <ClientWrapper>
-                <EmptyState title="Unauthorized" subtitle="Please login to continue" />
+                <EmptyState title="Unauthorized" subtitle="Please login to continue!" />
             </ClientWrapper>
         )
     }
 
-    const reservations = await getReservations({ userId: currentUser.id });
+    const listings = await getListings({ userId: currentUser.id });
 
-    if (reservations.length === 0) {
+    if (listings.length === 0) {
 
         return (
             <ClientWrapper>
-                <EmptyState title="No trips found!" subtitle="Looks like you have no trips booked!" />
+                <EmptyState title="No Properties found!" subtitle="Looks like you have no properties to show!" />
             </ClientWrapper>
         )
     }
 
     return (
+
         <ClientWrapper>
-            <TripsView
-                reservations={reservations as ModifiedReservation[]}
+            <PropertiesView
+                listings={listings}
                 currentUser={currentUser}
             />
         </ClientWrapper>
@@ -42,4 +42,4 @@ const TripsPage = async () => {
 
 }
 
-export default TripsPage;
+export default PropertiesPage;
