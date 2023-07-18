@@ -1,7 +1,7 @@
 'use client';
 
 import useLoginModal from "@/app/hooks/useLoginModal";
-import { categories } from "@/app/lib/categoryItemsProvider";
+import { categories } from "@/lib/categoryItemsProvider";
 import { ModifiedListing, ModifiedReservation, ModifiedUser } from "@/app/types";
 import axios from "axios";
 import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";

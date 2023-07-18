@@ -1,6 +1,6 @@
 import { bcryptPasswordHash } from "@/app/utils/bcryptHandlers";
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/app/lib/prismadb";
+import prisma from "@/lib/prismadb";
 
 
 export async function POST(request: NextRequest) {
