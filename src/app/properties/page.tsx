@@ -1,7 +1,7 @@
 import ClientWrapper from "../components/ClientWrapper";
 import EmptyState from "../components/EmptyState";
-import getCurrentUser from "../../utils/getCurrentUser";
-import getListings from "../../utils/getListings";
+import getCurrentUser from "../utils/getCurrentUser";
+import getListings from "../utils/getListings";
 import PropertiesView from "./components/PropertiesView";
 
 const PropertiesPage = async () => {

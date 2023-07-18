@@ -1,5 +1,5 @@
 'use client';
-import { categories } from "@/lib/categoryItemsProvider";
+import { categories } from "@/app/lib/categoryItemsProvider";
 import axios from "axios";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";

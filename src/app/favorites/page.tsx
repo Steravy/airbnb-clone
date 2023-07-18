@@ -1,8 +1,8 @@
 import ClientWrapper from "../components/ClientWrapper";
 import EmptyState from "../components/EmptyState";
 
-import getCurrentUser from "../../utils/getCurrentUser";
-import getFavouritesListings from "../../utils/getFavoriteListings";
+import getCurrentUser from "../utils/getCurrentUser";
+import getFavouritesListings from "../utils/getFavoriteListings";
 import FavoritesView from "./components/FavoritesView";
 
 const FavouritesPage = async () => {

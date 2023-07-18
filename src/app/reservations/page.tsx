@@ -1,5 +1,5 @@
-import getCurrentUser from "../../utils/getCurrentUser"
-import getReservations from "../../utils/getReservations"
+import getCurrentUser from "../utils/getCurrentUser"
+import getReservations from "../utils/getReservations"
 import ClientWrapper from "../components/ClientWrapper"
 import EmptyState from "../components/EmptyState"
 import ReservationsView from "./components/ReservationsView"

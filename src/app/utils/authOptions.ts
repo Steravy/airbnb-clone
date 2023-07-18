@@ -1,4 +1,4 @@
-import prisma from "@/lib/prismadb";
+import prisma from "@/app/lib/prismadb";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 // import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcrypt";

@@ -1,4 +1,4 @@
-import prisma from "@/lib/prismadb";
+import prisma from "@/app/lib/prismadb";
 
 interface IParams {
     listingId?: string;
