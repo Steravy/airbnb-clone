@@ -1,5 +1,4 @@
 'use client';
-import useRentModal from "@/hooks/useRentModal";
 import { categories } from "@/lib/categoryItemsProvider";
 import axios from "axios";
 import dynamic from "next/dynamic";
@@ -14,6 +13,7 @@ import CountrySelector from "../inputs/CountrySelector";
 import ImageUploader from "../inputs/ImageUploader";
 import Input from "../inputs/Input";
 import Modal from "./Modal";
+import useRentModal from "@/app/hooks/useRentModal";
 // import Map from "../Map";
 
 

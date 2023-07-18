@@ -1,7 +1,6 @@
 'use client';
 import useLoginModal from '@/app/hooks/useLoginModal';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
-import useRentModal from '@/hooks/useRentModal';
 import { ModifiedUser } from '@/app/types';
 import { signOut } from 'next-auth/react';
 import { Fragment, useCallback, useState } from 'react';
@@ -10,6 +9,7 @@ import UserAvatar from '../UserAvatar';
 import MenuItem from './MenuItem';
 import { IoMdClose } from 'react-icons/io';
 import { useRouter } from 'next/navigation';
+import useRentModal from '@/app/hooks/useRentModal';
 
 interface UserMenuProps {
 
