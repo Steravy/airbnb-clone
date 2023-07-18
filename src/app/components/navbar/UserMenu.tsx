@@ -1,7 +1,7 @@
 'use client';
 import useLoginModal from '@/app/hooks/useLoginModal';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
-import useRentModal from '@/app/hooks/useRentModal';
+import useRentModal from '@/hooks/useRentModal';
 import { ModifiedUser } from '@/app/types';
 import { signOut } from 'next-auth/react';
 import { Fragment, useCallback, useState } from 'react';

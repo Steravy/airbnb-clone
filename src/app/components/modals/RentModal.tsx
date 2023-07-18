@@ -1,5 +1,5 @@
 'use client';
-import useRentModal from "@/app/hooks/useRentModal";
+import useRentModal from "@/hooks/useRentModal";
 import { categories } from "@/lib/categoryItemsProvider";
 import axios from "axios";
 import dynamic from "next/dynamic";
