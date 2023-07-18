@@ -62,8 +62,8 @@ const SearchModal = () => {
 
         const updatedQuery: any = {
             ...query,
-            location: location?.value,
-            guestsCount: guestsCount,
+            locationValue: location?.value,
+            guestCount: guestsCount,
             roomCount: roomCount,
             bathroomCount: bathroomCount,
         }
