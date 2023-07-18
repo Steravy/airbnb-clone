@@ -15,7 +15,7 @@ This repository is an Airbnb clone built with Next.js, a powerful React.js frame
 
 To get started with this project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/Steravy/Airbnb-clone`
+1. Clone the repository: `git clone https://github.com/Steravy/airbnb-clone.git`
 2. Install the dependencies: `npm install`
 3. Set up the environment variables by creating a `.env` file and filling in the required values.
 4. Start the development server: `npm run dev`
