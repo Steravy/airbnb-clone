@@ -3,8 +3,8 @@ import Container from "./components/Container";
 import EmptyState from "./components/EmptyState";
 import ListingCard from "./components/listings/ListingCard";
 import { ModifiedListing } from "./types";
-import getCurrentUser from "./utils/getCurrentUser";
-import getListings, { IListingsParams } from "./utils/getListings";
+import getCurrentUser from "../utils/getCurrentUser";
+import getListings, { IListingsParams } from "../utils/getListings";
 
 interface HomeProps {
   searchParams: IListingsParams;

@@ -5,7 +5,7 @@ import RentModal from './components/modals/RentModal'
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import ToastProvider from './components/providers/ToastProvider'
-import getCurrentUser from './utils/getCurrentUser'
+import getCurrentUser from '../utils/getCurrentUser'
 import ClientWrapper from './components/ClientWrapper'
 import SearchModal from './components/modals/SearchModal'
 

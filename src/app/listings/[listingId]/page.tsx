@@ -2,9 +2,9 @@ import ClientWrapper from "@/app/components/ClientWrapper";
 import EmptyState from "@/app/components/EmptyState";
 import ListingView from "@/app/components/listings/ListingView";
 import { ModifiedReservation } from "@/app/types";
-import getCurrentUser from "@/app/utils/getCurrentUser";
-import getListingById from "@/app/utils/getListingById";
-import getReservations from "@/app/utils/getReservations";
+import getCurrentUser from "@/utils/getCurrentUser";
+import getListingById from "@/utils/getListingById";
+import getReservations from "@/utils/getReservations";
 
 interface IParams {
     listingId?: string;

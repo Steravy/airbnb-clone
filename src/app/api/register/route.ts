@@ -1,4 +1,4 @@
-import { bcryptPasswordHash } from "@/app/utils/bcryptHandlers";
+import { bcryptPasswordHash } from "@/utils/bcryptHandlers";
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prismadb";
 

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import getCurrentUser from "@/app/utils/getCurrentUser";
+import getCurrentUser from "@/utils/getCurrentUser";
 import prisma from "@/lib/prismadb";
 
 interface IParams {
