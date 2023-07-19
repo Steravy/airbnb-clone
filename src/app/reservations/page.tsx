@@ -13,6 +13,7 @@ const ReservationsPage = async () => {
     if (!currentUser) {
 
         return (
+
             <ClientWrapper>
                 <EmptyState title="Unauthorized" subtitle="Please login to continue!" />
             </ClientWrapper>

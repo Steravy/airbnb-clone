@@ -1,7 +1,8 @@
 # Airbnb Clone
 
-This repository is an Airbnb clone built with Next.js, a powerful React.js framework. The project aims to replicate the core functionality of Airbnb, providing a platform for users to authenticate, browse property listings, search and filter listings, make bookings and reservations, and leave reviews. But the main goal was to built something challenging in order to sharp my skills and gain new ones.
+This repository is an Airbnb clone built with Next.js, a powerful React.js framework. The project aims to replicate the core functionality of Airbnb, providing a platform for users to authenticate, browse property, search and filter places, make bookings, reservations, add to favorites, and properties for the owners. But the main goal was to built something challenging in order to sharp my skills and gain new ones.
 
+![Landing Page](https://github.com/Steravy/buks-bank-app/blob/main/src/assets/screenShots/heroSection.png)
 ## Features
 
 - **User Authentication**: Users can create accounts, log in, and securely authenticate themselves on the platform.
