@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import ClientWrapper from "./components/ClientWrapper";
 import Container from "./components/Container";
 import EmptyState from "./components/EmptyState";
@@ -22,7 +24,6 @@ export default async function Home({ searchParams }: HomeProps) {
       </ClientWrapper>
     )
   }
-
 
   return (
     <ClientWrapper>
