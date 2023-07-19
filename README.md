@@ -16,11 +16,16 @@ This repository is an Airbnb clone built with Next.js, a powerful React.js frame
 - **Register a property**
 ![Register Property](https://github.com/Steravy/airbnb-clone/blob/main/public/images/register.png)
 
+
 - **Login into your account**
 ![Login Modal](https://github.com/Steravy/airbnb-clone/blob/main/public/images/login.png)
 
+
 - **View and book a place that you like**
 ![View Property](https://github.com/Steravy/airbnb-clone/blob/main/public/images/view_listing.png)
+
+
+- **And much more...**
 
 ## Getting Started
 
