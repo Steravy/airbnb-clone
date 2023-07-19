@@ -2,7 +2,8 @@
 
 This repository is an Airbnb clone built with Next.js, a powerful React.js framework. The project aims to replicate the core functionality of Airbnb, providing a platform for users to authenticate, browse property, search and filter places, make bookings, reservations, add to favorites, and properties for the owners. But the main goal was to built something challenging in order to sharp my skills and gain new ones.
 
-![Landing Page](https://github.com/Steravy/buks-bank-app/blob/main/src/assets/screenShots/heroSection.png)
+![Landing Page](https://github.com/Steravy/airbnb-clone/blob/main/public/images/home_page.png)
+
 ## Features
 
 - **User Authentication**: Users can create accounts, log in, and securely authenticate themselves on the platform.
@@ -11,6 +12,10 @@ This repository is an Airbnb clone built with Next.js, a powerful React.js frame
 - **Booking and Reservations**: Users can book properties and manage their reservations, including viewing booking details, modifying dates, and canceling reservations.
 - **Reviews**: Users can leave reviews and ratings for properties they have stayed in, providing valuable feedback to property owners and helping other users make informed decisions.
 - **Technologies**: The project utilizes a variety of technologies, including Next.js, React, Node.js, Express, MongoDB, Prisma, and Tailwind CSS, to deliver a modern and efficient application.
+
+![Register Property](https://github.com/Steravy/airbnb-clone/blob/main/public/images/register.png)
+![Login Modal](https://github.com/Steravy/airbnb-clone/blob/main/public/images/login.png)
+![View Property](https://github.com/Steravy/airbnb-clone/blob/main/public/images/view_listing.png)
 
 ## Getting Started
 
@@ -45,6 +50,7 @@ Contributions are welcome! If you want to contribute to this project, please fol
 ## Contact
 
 If you have any questions, suggestions, or feedback, please feel free to contact at [stefanvitoria@sapo.pt](mailto:stefanvitoria@sapo.pt).
+Need me for some project? Uset it to reach me as well.
 
 ## License
 
