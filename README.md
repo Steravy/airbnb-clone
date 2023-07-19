@@ -13,8 +13,13 @@ This repository is an Airbnb clone built with Next.js, a powerful React.js frame
 - **Reviews**: Users can leave reviews and ratings for properties they have stayed in, providing valuable feedback to property owners and helping other users make informed decisions.
 - **Technologies**: The project utilizes a variety of technologies, including Next.js, React, Node.js, Express, MongoDB, Prisma, and Tailwind CSS, to deliver a modern and efficient application.
 
+- **Register a property**
 ![Register Property](https://github.com/Steravy/airbnb-clone/blob/main/public/images/register.png)
+
+- **Login into your account**
 ![Login Modal](https://github.com/Steravy/airbnb-clone/blob/main/public/images/login.png)
+
+- **View and book a place that you like**
 ![View Property](https://github.com/Steravy/airbnb-clone/blob/main/public/images/view_listing.png)
 
 ## Getting Started
